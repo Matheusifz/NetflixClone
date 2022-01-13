@@ -13,42 +13,54 @@ export default {
       {
         slug: "originals",
         title: "Only on Netflix",
-        items: [],
+        items: await basicFetch(
+          `/discover/tv?with_network=213&api_key=${API_KEY}`
+        ),
       },
       {
         slug: "trending",
         title: "Top picks for you",
-        items: [],
+        items: await basicFetch(`/trending/all/week&api_key=${API_KEY}`),
       },
       {
         slug: "toprated",
         title: "Popular on Netflix",
-        items: [],
+        items: await basicFetch(`/movie/top_rated&api_key=${API_KEY}`),
       },
       {
         slug: "action",
         title: "Top picks for you",
-        items: [],
+        items: await basicFetch(
+          `/discover/movie?with_genres=28&api_key=${API_KEY}`
+        ),
       },
       {
         slug: "comedy",
         title: "Comedy",
-        items: [],
+        items: await basicFetch(
+          `/discover/movie?with_genres=35&api_key=${API_KEY}`
+        ),
       },
       {
         slug: "horror",
         title: "Horror",
-        items: [],
+        items: await basicFetch(
+          `/discover/movie?with_genres=27&api_key=${API_KEY}`
+        ),
       },
       {
         slug: "romance",
         title: "Romance",
-        items: [],
+        items: await basicFetch(
+          `/discover/movie?with_genres=10749&api_key=${API_KEY}`
+        ),
       },
       {
         slug: "documentary",
         title: "Documentary",
-        items: [],
+        items: await basicFetch(
+          `/discover/movie?with_genres=99&api_key=${API_KEY}`
+        ),
       },
     ];
   },
