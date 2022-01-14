@@ -1,17 +1,11 @@
-import { useEffect } from "react";
-
-import Api from "./services/Api";
+import MovieRow from "./Components/MovieRow";
 
 const App = () => {
-  useEffect(() => {
-    const loadAll = async () => {
-      let list = await Api.getHomeList();
-      console.log(list);
-    };
-    loadAll();
-  }, []);
-
-  return <div>Hello World</div>;
+  return (
+    <div className="App">
+      <MovieRow />
+    </div>
+  );
 };
 
 export default App;
