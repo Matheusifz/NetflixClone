@@ -13,52 +13,52 @@ export default {
       {
         slug: "originals",
         title: "Only on Netflix",
-        items: await basicFetch(
+        items: await fetchApi(
           `/discover/tv?with_network=213&api_key=${API_KEY}`
         ),
       },
       {
         slug: "trending",
         title: "Top picks for you",
-        items: await basicFetch(`/trending/all/week&api_key=${API_KEY}`),
+        items: await fetchApi(`/trending/all/week&api_key=${API_KEY}`),
       },
       {
         slug: "toprated",
         title: "Popular on Netflix",
-        items: await basicFetch(`/movie/top_rated&api_key=${API_KEY}`),
+        items: await fetchApi(`/movie/top_rated&api_key=${API_KEY}`),
       },
       {
         slug: "action",
         title: "Top picks for you",
-        items: await basicFetch(
+        items: await fetchApi(
           `/discover/movie?with_genres=28&api_key=${API_KEY}`
         ),
       },
       {
         slug: "comedy",
         title: "Comedy",
-        items: await basicFetch(
+        items: await fetchApi(
           `/discover/movie?with_genres=35&api_key=${API_KEY}`
         ),
       },
       {
         slug: "horror",
         title: "Horror",
-        items: await basicFetch(
+        items: await fetchApi(
           `/discover/movie?with_genres=27&api_key=${API_KEY}`
         ),
       },
       {
         slug: "romance",
         title: "Romance",
-        items: await basicFetch(
+        items: await fetchApi(
           `/discover/movie?with_genres=10749&api_key=${API_KEY}`
         ),
       },
       {
         slug: "documentary",
         title: "Documentary",
-        items: await basicFetch(
+        items: await fetchApi(
           `/discover/movie?with_genres=99&api_key=${API_KEY}`
         ),
       },
