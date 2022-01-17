@@ -1,11 +1,7 @@
-import MovieRow from "./Components/MovieRow";
+import Genre from "./Components/Genre";
 
 const App = () => {
-  return (
-    <div className="App">
-      <MovieRow />
-    </div>
-  );
+  return <Genre />;
 };
 
 export default App;
